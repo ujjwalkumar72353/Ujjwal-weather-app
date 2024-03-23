@@ -5,6 +5,8 @@ import { Button } from "@/components/ui/button";
 
 import React from 'react'
 import { github } from "../utilis/Icons";
+import ThemeDropdown from "../ThemeDropdown/ThemeDropdown";
+import SearchDialog from "./SearchDialog/SearchDialog";
 
 const Navbar = () => {
     const router = useRouter();
@@ -13,6 +15,9 @@ const Navbar = () => {
     <div className='left'>  </div>
   
           <div className='search-container flex shrink-0 w-full gap-2 sm:w-fit'>
+            <SearchDialog/>
+            <div className="btn-group flex items-center gap-2">
+            <ThemeDropdown/>
             <Button  className='source-code flex items-center gap-2'
                  onClick={()=>{
                     router.push("https://github.com/ujjwalkumar72353/Ujjwal-weather-app")
@@ -21,6 +26,8 @@ const Navbar = () => {
             {github}
             Source code
             </Button>
+            </div>
+            
     </div> 
    </div>
   )
