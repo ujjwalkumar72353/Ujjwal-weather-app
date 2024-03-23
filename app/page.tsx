@@ -4,7 +4,7 @@ export default function Home() {
   return (
     <main>
     <div>
-      I am ujjwal Kumar
+     i am ujjwal
     </div>
     </main>
   );
