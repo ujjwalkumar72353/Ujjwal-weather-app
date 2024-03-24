@@ -12,7 +12,7 @@ export async function GET( req: NextRequest){
         const url = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${apiKey}`;
 
         const res=await axios.get(url);
-        console.log(res.data);
+        // console.log(res.data);
         return NextResponse.json(res.data);
     }
     catch(error){
