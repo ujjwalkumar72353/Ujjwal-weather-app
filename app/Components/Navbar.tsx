@@ -5,7 +5,7 @@ import { Button } from "@/components/ui/button";
 
 import React from 'react'
 import { github } from "../utilis/Icons";
-import ThemeDropdown from "../ThemeDropdown/ThemeDropdown";
+import ThemeDropdown from "./ThemeDropdown/ThemeDropdown";
 import SearchDialog from "./SearchDialog/SearchDialog";
 
 const Navbar = () => {
