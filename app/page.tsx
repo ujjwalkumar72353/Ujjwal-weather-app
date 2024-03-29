@@ -1,16 +1,21 @@
 
+import Image from "next/image";
 import AirPollution from "./Components/AirPollution/AirPollution";
 import DailyForecast from "./Components/DailyForecast/DailyForecast";
 import Feelslike from "./Components/Feelslike/Feelslike";
 import Humidity from "./Components/Humidity/Humidity";
+import Mapbox from "./Components/Mapbox/Mapbox";
 import Navbar from "./Components/Navbar";
 import Population from "./Components/Population/Population";
+import Pressure from "./Components/Pressure/Pressure";
 import Sunset from "./Components/Sunset/Sunset";
 
 import Tempearture from "./Components/Temperature/Tempearture";
 import UvIndex from "./Components/Uvindex/Uvindex";
+import Visibility from "./Components/Visibility/Visibility";
 
 import Wind from "./Components/Wind/Wind";
+import defaultStates from "./utilis/defaultStates";
 
 
 export default function Home() {
@@ -33,10 +38,45 @@ export default function Home() {
                <Population/>
                <Feelslike/>
                <Humidity/>
+               <Visibility/>
+               <Pressure/>
               </div>
-             </div>
+              <div className="mapbox-con mt-4 flex gap-4">
+            <Mapbox />
+            <div className="states flex flex-col gap-3 flex-1">
+              <h2 className="flex items-center gap-2 font-medium">
+                Top Large Cities
+              </h2>
+              <div className="flex flex-col gap-4">
+                {defaultStates.map((state, index) => {
+                  return (
+                    <div
+                      key={index}
+                      className="border rounded-lg cursor-pointer dark:bg-dark-grey shadow-sm dark:shadow-none"
+                      
+                    >
+                      <p className="px-6 py-4">{state.name}</p>
+                    </div>
+                  );
+                })}
+              </div>
+            </div>
           </div>
-     
+        </div>
+      </div>
+          <footer className="py-4 flex justify-center pb-8">
+        <p className="footer-text text-sm flex items-center gap-1">
+          Made by
+          <Image src={"/logo-white.svg"} alt="logo" width={20} height={20} />
+          <a
+            href="https://thecodedealer.com"
+            target="_blank"
+            className=" text-green-300 font-bold"
+          >
+            Ujjwal Kumar
+          </a>
+        </p>
+      </footer>
     </main>
   );
 }
