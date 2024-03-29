@@ -6,7 +6,7 @@ import Feelslike from "./Components/Feelslike/Feelslike";
 import Humidity from "./Components/Humidity/Humidity";
 import Mapbox from "./Components/Mapbox/Mapbox";
 import Navbar from "./Components/Navbar";
-import Population from "./Components/Population/Population";
+
 import Pressure from "./Components/Pressure/Pressure";
 import Sunset from "./Components/Sunset/Sunset";
 
@@ -16,6 +16,7 @@ import Visibility from "./Components/Visibility/Visibility";
 
 import Wind from "./Components/Wind/Wind";
 import defaultStates from "./utilis/defaultStates";
+import Population from "./Components/Population/Population";
 
 
 export default function Home() {
@@ -35,7 +36,7 @@ export default function Home() {
                 <Wind/>
                 <DailyForecast/>
                <UvIndex/>
-               <Population/>
+              <Population/>
                <Feelslike/>
                <Humidity/>
                <Visibility/>
