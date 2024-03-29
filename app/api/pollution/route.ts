@@ -13,7 +13,6 @@ export async function GET(req: NextRequest) {
     const url = `http://api.openweathermap.org/data/2.5/air_pollution?lat=${lat}&lon=${lon}&appid=${apiKey}`;
 
     const res = await axios.get(url);
-    console.log(res.data);
     return NextResponse.json(res.data);
    
   } catch (error) {
