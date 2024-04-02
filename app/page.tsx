@@ -17,6 +17,7 @@ import Visibility from "./Components/Visibility/Visibility";
 import Wind from "./Components/Wind/Wind";
 import defaultStates from "./utilis/defaultStates";
 import Population from "./Components/Population/Population";
+import FiveDayForecast from "./Components/FiveDayForecast/FiveDayForecast";
 
 
 export default function Home() {
@@ -26,6 +27,7 @@ export default function Home() {
       <div className="pb-4 flex flex-col gap-4 md:flex-row">
           <div className="flex flex-col gap-4 w-full min-w-[18rem] md:w-[35rem]">
             <Tempearture/>
+            <FiveDayForecast/>
           </div>
 
              <div className="flex flex-col w-full">
